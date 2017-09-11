@@ -1,0 +1,6 @@
+---
+- hosts: test
+  tasks:
+      - name: copy files
+        copy: src=~/ansible/pushover.ini dest=~/monitoring/pushover.ini
+        copy: src=~/ansible/prod1a.sh dest=~/monitoring/prod1a.sh

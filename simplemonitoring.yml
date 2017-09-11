@@ -1,0 +1,8 @@
+- hosts: test
+  vars:
+    - destination: /home/bernie/monitoring
+  tasks:
+    - name: Installing simple monitoring on the remote servers
+      git: repo=https://github.com/blm849/simple_server_monitoring.git
+           dest=/home/bernie/monitoring
+           force=yes

@@ -1,0 +1,4 @@
+- hosts: test
+  tasks:
+     - name: add line to crontab's root
+       cron: name="Monitoring" hour="9-21" minute="*/5" weekday="*"  job="/home/bernie/monitoring/prod1.sh /home/bernie/monitoring && /home/bernie/monitoring/prod1a.sh > /dev/null"
